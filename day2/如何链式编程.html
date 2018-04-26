@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-1.12.1.js"></script>
+	<script>
+	$(function(){
+		//链式编程：对象不停的调用方法
+		//对象。方法（）。方法（）。方法（）；
+		//对象调用方法，如果返回值还是当前这个对象，那就可以继续调用方法
+		//经验：在jQuery中，一般情况，对象调用的方法，这个方法的意思是设置的意思，那么返回来的几乎是当前的对象，就可以继续的链式编程了
+		$("#btn").click(function(){
+			//获取按钮的value属性值
+			/*$(this).val()*/; 
+			//设置val的属性值
+			var obj =$(this).val("哈哈").css("backgroundColor","red").css("width","300px");
+			console.log(obj);
+		});
+	});
+	</script>
+</head>
+<body>
+	<input type="button" value="显示效果" id="btn"/>
+	<div id="dv"></div>
+</body>
+</html>

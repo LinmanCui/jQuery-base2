@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			border: 5px solid red;
+		}
+	</style>
+	<script src="jquery-1.12.1.js"></script>
+	<script>
+	//在父级元素div中创建一个子元素
+	$(function(){
+		$("#btn").click(function(){
+			/*$("#dv").append($("<a href='http://www.baidu.com'>百度</a>"));*/
+			$("<a href='http://www.baidu.com'>百度</a>").appendTo($("#dv"));
+		});
+
+	});
+	</script>
+</head>
+<body>
+	<input type="button" value="创建一个a标签" id="btn"/>
+	<div id="dv"></div>
+</body>
+</html>

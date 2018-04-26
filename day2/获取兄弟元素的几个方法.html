@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-1.12.1.js"></script>
+	<script>
+	$(function(){
+		//获取某个lid的下一个兄弟元素
+		$("#three").click(function(){
+			/*下一个*/
+			/*$(this).next().css("backgroundColor","yellow");*/
+			/*上一个*/
+			/*$(this).prev().css("backgroundColor","yellow");*/
+			/*后面的全部*/
+			/*$(this).nextAll().css("backgroundColor","yellow");
+			前面的全部
+			$(this).prevAll().css("backgroundColor","yellow");
+*/
+			/*全部的兄弟元素*/
+			$(this).siblings("li").css("backgroundColor","yellow");
+		});
+
+		
+			
+		
+	});
+	</script>
+</head>
+<body>
+	
+	<ul id="uu">
+		<li>网红</li>
+		<li>网红</li>
+		<li id="three">网红3</li>
+		<li>网红</li>
+		<li>网红</li>
+		<li>网红</li>
+		<li>网红</li>
+		<li>网红</li>
+	</ul>
+</body>
+</html>

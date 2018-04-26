@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	.cls{
+		width: 200px;
+		height: 100px;
+		background-color: crimson;
+	}
+	</style>
+	<script src="jquery-1.12.1.js"></script>
+	<script>
+	$(function(){
+	
+		$("#btn").click(function(){
+			if($("#dv").hasClass("cls")){
+				console.log("应用了");
+			}else{
+				console.log("没有应用了");
+			}
+		});
+	});
+	</script>
+</head>
+<body>
+	<input type="button" value="显示效果" id="btn"/>
+	<div id="dv" class="cls"></div>
+</body>
+</html>

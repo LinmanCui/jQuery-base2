@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		img{
+			vertical-align: top;
+		}
+	</style>
+
+	<script src="jquery-1.12.1.js"></script>
+	<script>
+	$(function(){
+		//arguments.callee匿名函数，少用
+				$("#btn1").click(function(){
+				$("div>img:last").hide(300,function f1(){
+					$(this).prev().hide(300,f1);
+				});
+				/*$("#btn1").click(function(){
+				$("div>img:last").hide(300,function(){
+					$(this).prev().hide(300,arguments.callee);
+				});*/
+			
+			});
+				$("#btn2").click(function(){
+				$("div>img:first").show(300,function f1(){
+					$(this).next().show(300,f1);
+				});
+			
+			});
+	});
+	</script>
+</head>
+<body>
+	<input type="button" value="隐藏动画" id="btn1">
+	<input type="button" value="显示动画" id="btn2">
+
+	<div>
+	<img src="images/1.jpg" alt="">
+	<img src="images/2.jpg" alt="">
+	<img src="images/3.jpg" alt="">
+	<img src="images/4.jpg" alt="">
+	</div>
+</body>
+</html>

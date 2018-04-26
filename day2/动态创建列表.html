@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			border: 5px solid red;
+		}
+	</style>
+	<script src="jquery-1.12.1.js"></script>
+	<script>
+	
+	$(function(){
+		$("#btn").click(function(){
+			//创建ul，加入到div中
+			var ulObj=$("<ul style='list-style-type:none;cursor:pointer'></ul>");
+			$("#dv").append(ulObj);
+			$("<li>aa</li> <li>bb</li> <li>ss</li> <li>dd</li>").appendTo(ulObj).mouseenter(function(){
+				$(this).css("backgroundColor","green");
+			}).mouseleave(function(){
+					$(this).css("backgroundColor","");
+			}).click(function(){
+				$(this).css("color","pink").css("font-size","20px");
+			});
+			//鼠标进入高亮
+		});
+
+	});
+	</script>
+</head>
+<body>
+	<input type="button" value="创建列表" id="btn"/>
+	<div id="dv"></div>
+</body>
+</html>

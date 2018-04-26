@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		img{
+			vertical-align: top;
+		}
+	</style>
+
+	<script src="jquery-1.12.1.js"></script>
+	<script>
+	$(function(){
+		$("div").click(function(){
+			$(this).hide(300);
+		});
+	});
+	</script>
+</head>
+<body>
+	<input type="button" value="隐藏动画" id="btn1">
+	<input type="button" value="显示动画" id="btn2">
+
+	
+	<div><img src="images/1.jpg" alt=""></div>
+	<div><img src="images/2.jpg" alt=""></div>
+	<div><img src="images/3.jpg" alt=""></div>
+	<div><img src="images/4.jpg" alt=""></div>
+	
+	
+</body>
+</html>

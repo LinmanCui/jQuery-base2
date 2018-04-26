@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	.cls{	
+		background-color: black;
+	}
+	</style>
+	<script src="jquery-1.12.1.js"></script>
+	<script>
+/*	$(function(){
+	
+		$("#btn").click(function(){
+		//判断body是否应用cls样式,如果应用了就移除
+		if($("body").hasClass("cls")){
+			$("body").removeClass("cls");
+		}
+			else{
+				$("body").addClass("cls");
+			}
+		});
+	});*/
+		$(function(){
+	
+		$("#btn").click(function(){
+			//切换类样式
+			$("body").toggleClass("cls");
+	
+		});
+	});
+	</script>
+</head>
+<body>
+	<input type="button" value="开关灯" id="btn"/>
+	<div id="dv" class="cls"></div>
+</body>
+</html>

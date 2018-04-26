@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			border: 5px solid red;
+		}
+	</style>
+	<script src="jquery-1.12.1.js"></script>
+	<script>
+	
+	$(function(){
+		$("#btn").click(function(){
+			for (var i = 0; i < 10; i++) {
+				$("#dv").append($("<p>hahah</p>"));
+			}
+		});
+	});
+	</script>
+</head>
+<body>
+	<input type="button" value="创建一个a标签" id="btn"/>
+	<div id="dv"></div>
+</body>
+</html>
